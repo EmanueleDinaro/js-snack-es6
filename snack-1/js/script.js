@@ -5,26 +5,27 @@
 
 const racingBikes = [
     {
-        brandBike: "Lobito",
-        modelBike: "RV10",
-        weightBike: 8.9,
+        brand: "Lobito",
+        model: "RV10",
+        weight: 8.9,
     },
     {
-        brandBike: "Van Rysel",
-        modelBike: "RCR PRO",
-        weightBike: 6.75,
+        brand: "Van Rysel",
+        model: "RCR PRO",
+        weight: 6.75,
     },
     {
-        brandBike: "Cannondale",
-        modelBike: "Synapse",
-        weightBike: 8,
+        brand: "Cannondale",
+        model: "Synapse",
+        weight: 8,
     }
 ]
 
-const weightBikes = []
-
-for(i = 0; i < racingBikes.length; i++) {
-    weightSingleBike = racingBikes[i].weightBike;
-    weightBikes.push(weightSingleBike);
+let min = racingBikes[0];
+for (let i = 1; i < racingBikes.length; i++) {
+    if (racingBikes[i].weight < min.weight) {
+        min = racingBikes[i]
+    }
 }
-console.log(weightBikes)
+
+console.log(min)
