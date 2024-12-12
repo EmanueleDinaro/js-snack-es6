@@ -21,3 +21,10 @@ const racingBikes = [
     }
 ]
 
+const weightBikes = []
+
+for(i = 0; i < racingBikes.length; i++) {
+    weightSingleBike = racingBikes[i].weightBike;
+    weightBikes.push(weightSingleBike);
+}
+console.log(weightBikes)
